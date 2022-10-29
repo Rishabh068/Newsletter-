@@ -31,11 +31,11 @@ app.post("/",function(req,res){
         ]
     };
     const jsonData=JSON.stringify(data);
-    const url= "https://us9.api.mailchimp.com/3.0/lists/207572fc24";
+    const url= "https://us9.api.mailchimp.com/3.0/lists/{list key}";
 
     const options={
         method:"POST",
-        auth:"Rishabh:467c302931e7b9999afc2e27297df916-us9"
+        auth:"Rishabh:API KEY"
     };
     const request=https.request(url,options,function(response){
         if(response.statusCode===200){
@@ -63,5 +63,3 @@ app.listen(process.env.PORT||3000,function(){
 
 
 
-//apikey:467c302931e7b9999afc2e27297df916-us9
-//audid:207572fc24
